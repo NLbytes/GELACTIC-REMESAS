@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef2f7;
+    color: #202733;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    margin-bottom: 5px;
+    font-size: 34px;
+    letter-spacing: 3px;
+}
+
+header p {
+    margin-top: 0;
+    color: #687385;
+}
+
+.tarjeta {
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.tarjeta h2 {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd2dc;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 13px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    background: #26364a;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.mensaje {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.resultado {
+    margin-top: 25px;
+    padding: 20px;
+    border: 1px solid #d8dee7;
+    border-radius: 10px;
+    background: #f8fafc;
+}
+
+.resultado p,
+.comprobante-box p {
+    margin: 10px 0;
+}
+
+.estado {
+    margin-top: 20px;
+    padding: 12px;
+    text-align: center;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.pendiente {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.aprobada {
+    background: #d1e7dd;
+    color: #0f5132;
+}
+
+.rechazada {
+    background: #f8d7da;
+    color: #842029;
+}
+
+.botones {
+    display: flex;
+    gap: 10px;
+}
+
+.botones button {
+    flex: 1;
+}
+
+.aprobar {
+    background: #286b4b;
+}
+
+.rechazar {
+    background: #8a3038;
+}
+
+.comprobante {
+    background: #49576a;
+}
+
+.comprobante-box {
+    margin-top: 25px;
+    padding: 25px;
+    border: 2px dashed #9aa5b1;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+.comprobante-box h2 {
+    text-align: center;
+}
+
+.fecha {
+    margin-top: 20px !important;
+    text-align: center;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.oculto {
+    display: none;
+}
+
+@media (max-width: 600px) {
+
+    .contenedor {
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    .tarjeta {
+        padding: 20px;
+    }
+
+    .botones {
+        flex-direction: column;
+    }
+}

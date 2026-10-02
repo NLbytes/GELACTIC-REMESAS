@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galactic Remesas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="contenedor">
+
+        <header>
+            <h1>GALACTIC</h1>
+            <p>Solicitud de remesas</p>
+        </header>
+
+        <section class="tarjeta">
+
+            <h2>Datos de la operación</h2>
+
+            <label for="emisor">Emisor</label>
+            <input type="text" id="emisor" placeholder="Nombre del emisor">
+
+            <label for="beneficiario">Beneficiario</label>
+            <input type="text" id="beneficiario" placeholder="Nombre del beneficiario">
+
+            <label for="monto">Monto en pesos chilenos (CLP)</label>
+            <input type="number" id="monto" placeholder="Ej: 100000">
+
+            <label for="moneda">Moneda de destino</label>
+            <select id="moneda">
+                <option value="USD">Dólares estadounidenses (USD)</option>
+                <option value="VES">Bolívares (VES)</option>
+                <option value="EUR">Euros (EUR)</option>
+            </select>
+
+            <button onclick="calcularRemesa()">
+                Calcular remesa
+            </button>
+
+            <div id="mensaje" class="mensaje"></div>
+
+            <div id="resultado" class="resultado oculto">
+
+                <h2>Resultado de la operación</h2>
+
+                <p><strong>Emisor:</strong> <span id="resultadoEmisor"></span></p>
+
+                <p><strong>Beneficiario:</strong> <span id="resultadoBeneficiario"></span></p>
+
+                <p><strong>Monto original:</strong> $<span id="resultadoMonto"></span> CLP</p>
+
+                <p><strong>Tipo de cambio:</strong> <span id="resultadoCambio"></span></p>
+
+                <p><strong>Monto convertido:</strong> <span id="resultadoConvertido"></span></p>
+
+                <p><strong>Comisión (0,10%):</strong> $<span id="resultadoComision"></span> CLP</p>
+
+                <p><strong>Monto total:</strong> $<span id="resultadoTotal"></span> CLP</p>
+
+                <p><strong>N.º de operación:</strong> <span id="resultadoOperacion"></span></p>
+
+                <div class="estado pendiente" id="estado">
+                    Estado: PENDIENTE
+                </div>
+
+                <div class="botones">
+                    <button class="aprobar" onclick="cambiarEstado('Aprobada')">
+                        Aprobar solicitud
+                    </button>
+
+                    <button class="rechazar" onclick="cambiarEstado('Rechazada')">
+                        Rechazar solicitud
+                    </button>
+                </div>
+
+                <button class="comprobante" onclick="mostrarComprobante()">
+                    Ver comprobante
+                </button>
+
+            </div>
+
+            <div id="comprobante" class="comprobante-box oculto">
+
+                <h2>Comprobante Galactic</h2>
+
+                <p><strong>Operación:</strong> <span id="comprobanteOperacion"></span></p>
+
+                <p><strong>Emisor:</strong> <span id="comprobanteEmisor"></span></p>
+
+                <p><strong>Beneficiario:</strong> <span id="comprobanteBeneficiario"></span></p>
+
+                <p><strong>Monto:</strong> $<span id="comprobanteMonto"></span> CLP</p>
+
+                <p><strong>Monto convertido:</strong> <span id="comprobanteConvertido"></span></p>
+
+                <p><strong>Comisión:</strong> $<span id="comprobanteComision"></span> CLP</p>
+
+                <p><strong>Total:</strong> $<span id="comprobanteTotal"></span> CLP</p>
+
+                <p><strong>Estado:</strong> <span id="comprobanteEstado">Pendiente</span></p>
+
+                <p class="fecha" id="fecha"></p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
